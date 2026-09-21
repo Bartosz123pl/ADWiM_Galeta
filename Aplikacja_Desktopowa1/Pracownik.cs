@@ -14,5 +14,10 @@ namespace Aplikacja_Desktopowa1
         public string Wyplata { get; set; }
         public string PESEL { get; set; }
         public bool Menadzer { get; set; }
+        public string PelneImie
+        {
+            get { return Imie + " " + Nazwisko; }
+        }
     }
+
 }

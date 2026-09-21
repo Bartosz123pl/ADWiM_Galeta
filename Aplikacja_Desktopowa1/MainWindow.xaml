@@ -20,7 +20,7 @@
             <RowDefinition Height="333" />
         </Grid.RowDefinitions>
         <Label Content="Dodaj pracownika" Grid.Column="0" Grid.Row="0" FontSize="30" Height="50" Width="250" Grid.ColumnSpan="2"></Label>
-        <ListBox Name="Listbox" Grid.Column="0" Grid.Row="1" Height="333" Width="250"></ListBox>
+        <ListBox Name="Listbox1" Grid.Column="0" Grid.Row="1" Height="333" Width="250" DisplayMemberPath="PelneImie"/>
         <Button Content="Usuń pracownika" Name="Button1" Grid.Column="0" Grid.Row="2" Height="50" Width="100"></Button>
         <Button Content="Zobacz pracownika" Name="Button2" Grid.Column="1" Grid.Row="2" Height="50" Width="100"></Button>
 
