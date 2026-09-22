@@ -19,9 +19,35 @@ namespace Aplikacja_Desktopowa1
     /// </summary>
     public partial class Zobacz : Window
     {
-        public Zobacz()
+        private Pracownik pracownik;
+
+        public Zobacz(Pracownik pracownik)
         {
             InitializeComponent();
+
+            this.pracownik = pracownik;
+
+            Imie.Content = pracownik.Imie;
+            Nazwisko.Content = pracownik.Nazwisko;
+            PESEL.Content = pracownik.PESEL;
+
+            if (pracownik.M)
+            {
+                Plec.Content = "Mężczyzna";
+            }
+            else
+            {
+                Plec.Content = "Kobieta";
+            }
+
+            if (pracownik.Menadzer)
+            {
+                Menadzer.Content = "Tak";
+            }
+            else
+            {
+                Menadzer.Content = "Nie";
+            }
         }
     }
 }

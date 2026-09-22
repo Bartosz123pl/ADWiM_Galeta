@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aplikacja_Desktopowa1"
         mc:Ignorable="d"
-        Title="Zobacz" Height="1200" Width="500">
+        Title="Dodaj" Height="1200" Width="500">
     <Grid ShowGridLines="True" Margin="20">
         <!-- Definiowanie 3 kolumn o równej szerokości (*) -->
         <Grid.ColumnDefinitions>
