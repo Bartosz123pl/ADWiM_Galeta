@@ -36,7 +36,6 @@ namespace Aplikacja_Desktopowa1
             Dodaj okno = new Dodaj(listaPracownikow);
             okno.ShowDialog();
 
-            // tutaj możesz odświeżyć ListBox
             Listbox1.ItemsSource = null;
             Listbox1.ItemsSource = listaPracownikow;
         }

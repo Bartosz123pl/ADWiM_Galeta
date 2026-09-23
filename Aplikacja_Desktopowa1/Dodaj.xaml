@@ -7,13 +7,10 @@
         mc:Ignorable="d"
         Title="Dodaj" Height="1200" Width="500">
     <Grid ShowGridLines="True" Margin="20">
-        <!-- Definiowanie 3 kolumn o równej szerokości (*) -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"></ColumnDefinition>
             <ColumnDefinition Width="250"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-
-        <!-- Definiowanie 3 wierszy o równej wysokości (*) -->
         <Grid.RowDefinitions>
             <RowDefinition Height="200" />
             <RowDefinition Height="200" />
