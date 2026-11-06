@@ -1,0 +1,30 @@
+<Window x:Class="Aplikacja_Desktopowa2.Views.PublisherWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dane wydawnictwa"
+        Height="250" Width="350"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <TextBlock Text="Nazwa wydawnictwa"/>
+            <TextBox x:Name="NameBox" Margin="0,5,0,15"/>
+
+            <TextBlock Text="Adres"/>
+            <TextBox x:Name="AddressBox" Margin="0,5,0,15"/>
+        </StackPanel>
+
+        <Button Grid.Row="1"
+                Content="Zapisz"
+                Width="100"
+                Height="35"
+                HorizontalAlignment="Right"
+                Click="Save_Click"/>
+    </Grid>
+</Window>
