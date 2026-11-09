@@ -84,8 +84,24 @@ namespace Aplikacja_Desktopowa2.Views
                 return;
             }
 
-            if (db.Books.Any(b => b.ISBN == ISBNBox.Text.Trim()
-                && (book == null || b.Id != book.Id)))
+            string isbn = ISBNBox.Text.Trim();
+
+            bool exists;
+
+            if (book == null)
+            {
+                exists = db.Books.Any(b => b.ISBN == isbn);
+            }
+            else
+            {
+                int currentId = book.Id;
+
+                exists = db.Books.Any(b =>
+                    b.ISBN == isbn &&
+                    b.Id != currentId);
+            }
+
+            if (exists)
             {
                 MessageBox.Show("Książka o takim ISBN już istnieje.");
                 return;

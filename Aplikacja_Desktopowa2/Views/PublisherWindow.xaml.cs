@@ -29,8 +29,7 @@ namespace Aplikacja_Desktopowa2.Views
 
             Closed += (s, e) => db.Dispose();
         }
-
-        private void Save_Click(object sender, RoutedEventArgs e)
+private void Save_Click(object sender, RoutedEventArgs e)
         {
             string name = NameBox.Text.Trim();
             string address = AddressBox.Text.Trim();
@@ -41,13 +40,21 @@ namespace Aplikacja_Desktopowa2.Views
                 return;
             }
 
-            bool exists = db.Publishers.Any(p => p.Name == name);
+            bool exists;
 
-            if (exists && (publisher == null || !db.Publishers.Any(p => p.Id == publisher.Id)))
+            if (publisher == null)
             {
-                MessageBox.Show("Takie wydawnictwo już istnieje.");
-                return;
+                exists = db.Publishers.Any(p => p.Name == name);
             }
+            else
+            {
+                int currentId = publisher.Id;
+
+                exists = db.Publishers.Any(p =>
+                    p.Name == name && p.Id != currentId);
+            }
+
+            if (exists)
             {
                 MessageBox.Show("Takie wydawnictwo już istnieje.");
                 return;

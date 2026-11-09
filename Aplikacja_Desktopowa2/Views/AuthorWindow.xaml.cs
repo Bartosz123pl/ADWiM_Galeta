@@ -43,10 +43,25 @@ namespace Aplikacja_Desktopowa2.Views
                 return;
             }
 
-            if (db.Authors.Any(a =>
-                a.FirstName == firstName &&
-                a.LastName == lastName &&
-                (author == null || a.Id != author.Id)))
+            bool exists;
+
+            if (author == null)
+            {
+                exists = db.Authors.Any(a =>
+                    a.FirstName == firstName &&
+                    a.LastName == lastName);
+            }
+            else
+            {
+                int currentId = author.Id;
+
+                exists = db.Authors.Any(a =>
+                    a.FirstName == firstName &&
+                    a.LastName == lastName &&
+                    a.Id != currentId);
+            }
+
+            if (exists)
             {
                 MessageBox.Show("Taki autor już istnieje.");
                 return;

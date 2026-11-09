@@ -33,11 +33,6 @@
                                  Height="30"
                                  FontSize="14"
                                  TextChanged="SearchBox_TextChanged"/>
-
-                        <Button Content="Wyczyść"
-                                Width="90"
-                                Margin="10,0"
-                                Click="ClearSearch_Click"/>
                     </DockPanel>
 
                     <DataGrid x:Name="BooksGrid"
